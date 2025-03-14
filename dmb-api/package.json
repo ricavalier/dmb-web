@@ -1,0 +1,21 @@
+{
+  "name": "dmb-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DMB Server API Demo",
+  "main": "index.js",
+  "author": "Ricardo da Cunha Cavalier",
+  "license": "ISC",
+  "scripts": {
+    "dev": "nodemon app/index.js",
+    "server": "node app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
