@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup>
-import { computed, watch } from 'vue'
+  import { computed, watch } from 'vue'
   const data = defineModel()
   const status = computed(() => (data.value || {}).status || '')
   const message = computed(() => (data.value || {}).message || '')
@@ -13,7 +13,7 @@ import { computed, watch } from 'vue'
     () => {
       setTimeout(() => {
         data.value = {}
-      }, 5000);
+      }, 3000);
     }, {
     deep: true
   })

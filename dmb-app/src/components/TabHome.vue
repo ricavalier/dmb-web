@@ -52,5 +52,5 @@
   })
   onMounted(() => {
     chkError()
-})
+  })
 </script>

@@ -1,7 +1,11 @@
 <template>
   <article>
     <p>
-      <strong>Email</strong><br>
+      <strong>Nome</strong><br>
+      {{ data.name }}
+    </p>
+    <p>
+      <strong>E-mail</strong><br>
       {{ data.email }}
     </p>
     <p>

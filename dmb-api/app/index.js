@@ -19,7 +19,7 @@ let users = [
   }
 ];
 const status = [
-  { code: 200, description: "Retorno com Sucesso" },
+  { code: 200, description: "Solicitação com Sucesso" },
   { code: 400, description: "Solicitação inválida" },
   { code: 401, description: "Não autorizado" },
   { code: 403, description: "Proibido" },
@@ -51,6 +51,15 @@ const ResponseData = (res, status, obj) => {
     source: status,
   });
 };
+app.get("/registration", (req, res) => {
+  const data = users
+  setHeader(res);
+  if (data.length > 0) {
+    ResponseData(res, status[0], data);
+  } else {
+    ResponseData(res, status[1], {});
+  }
+});
 app.get("/registration/:id", (req, res) => {
   const id = req.params.id;
   const data = users.find((obj) => {
